@@ -134,12 +134,13 @@ public class Main {
             } else {
                 System.out.printf(" %15s| %15s|", "NA", "NA");
             }
-            fastestPrevTime = totalTime;
+            fastPrevTime = totalTime;
 
             startTime = getCpuTime();
             List<List<Integer>> fastestThreeSum = fastestThreeSum(list); // calls the fastest function
             endTime = getCpuTime();
             totalTime = endTime - startTime;                    //finds the difference between the two times
+
             System.out.printf(" %15d|", totalTime);
             if (N != 0 && N % 2 == 0) {
                 doubling = totalTime / fastestPrevTime;         //doubling ratio
